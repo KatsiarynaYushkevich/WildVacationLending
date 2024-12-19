@@ -200,6 +200,7 @@ $main_font_family: Montserrat;
   display: flex;
   align-items: center;
   justify-content: space-around;
+ padding-bottom: 58px;
 }
 .reason_block {
   display: flex;
@@ -213,12 +214,111 @@ $main_font_family: Montserrat;
     @include main_text_style(20px, 400, 24px);
   }
 
-  img{
+  img {
     max-width: 72px;
-    // max-height: 72px;
   }
 }
 
+.directions_wrapper {
+  background-color: #1b1e22;
+  width: 100%;
+}
+
+.actual_directions{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 72px;
+
+  h2{
+    margin-bottom: 45px;
+    width: 100%;
+    text-align: center;
+    @include main_text_style(34px, 500, 38px, );
+  }
+
+  button{
+    @include btn_style(217px, 48px, );
+    @include main_text_style(20px, 500, 24px, );
+    margin-top: 36px;
+  }
+}
+.directions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.direction_block {
+  background-color: #23282f;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  max-width: 360px;
+  max-height:433px ;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    
+  }
+}
+
+.direction_text {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  row-gap: 16px;
+  padding: 16px 20px 16px 20px;
+  h3 {
+    @include main_text_style(20px, 500, 24px);
+    max-width: 321px;
+  }
+
+  p {
+    @include main_text_style(14px, 400, 20px);
+    max-width: 321px;
+    flex-grow: 3;
+  }
+
+  span {
+    @include main_text_style(13px, 400, 16px, rgba(196, 196, 196, 0.5));
+  }
+}
+
+.price_block {
+  top:160px;
+  position: absolute;
+  display: flex;
+  height: 32px;
+  background-color: rgba(27, 30, 34, 0.75);
+  align-items: center;
+}
+
+.price {
+  @include main_text_style(20px, 800, 24px, #1b1e22);
+}
+
+.price_text {
+  display: flex;
+  max-width: 80px;
+  column-gap: 3px;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffb800;
+  width: 80px;
+  height: 100%;
+  @include main_text_style(14px, 400, 24px, #1b1e22);
+}
+
+.date_text{
+    padding: 0 5px 0 5px;
+}
+.date {
+  @include main_text_style(13px, 400, 16px);
+}
 @media (max-width: 1200px) {
   .header {
     background-position: center top;
@@ -346,12 +446,11 @@ $main_font_family: Montserrat;
 }
 
 @media (max-width: 450px) {
-
-  .header_text_block{
-    h1{
-      line-height:38px;
+  .header_text_block {
+    h1 {
+      line-height: 38px;
     }
-    p{
+    p {
       font-size: 16px;
       line-height: 28px;
     }
@@ -372,23 +471,23 @@ $main_font_family: Montserrat;
     }
   }
 
-  .search_panel{
+  .search_panel {
     max-width: 280px;
   }
 
-  .why_us_block{
-    h2{
+  .why_us_block {
+    h2 {
       font-size: 28px;
     }
   }
 
-  .reason_block{
-    img{
+  .reason_block {
+    img {
       max-width: 64px;
       max-height: 64px;
     }
 
-    p{
+    p {
       font-size: 16px;
     }
   }
