@@ -1,12 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css">
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header_wrapper">
+          <div class="header_nav_block">
+            <div class="header_logo">
+              <a href="#"
+                ><img src="./images/svg/logo.svg" alt="Логотип WildVacation"
+              /></a>
+              <div class="lang_button">
+                <button class="lang_btn btn_off">Eng</button>
+                <button class="lang_btn">Рус</button>
+              </div>
+            </div>
+            <img
+              class="hidden_img"
+              src="./images/svg/burger_icon.svg"
+              alt="Иконка бургер меню"
+            />
+            <div class="header_nav">
+              <nav>
+                <a href="#">О нас</a>
+                <a href="#">Туры</a>
+                <a href="#">Визы</a>
+                <a href="#">Агентам</a>
+                <a href="#">Контакты</a>
+              </nav>
+              <button>Помощь</button>
+            </div>
+          </div>
+          <div class="header_text_block">
+            <div class="header_text">
+              <h1>Исследуйте мир вместе с нами</h1>
+              <p>
+                Брось себе вызов. Отправься в путешествия в дикие уголки
+                природы.
+              </p>
+            </div>
+            <div class="search_form_block">
+              <form action="">
+                <p>Быстрый поиск тура</p>
+                <div class="search_panel">
+                  <input class="no_border" type="search" placeholder="Куда" />
+                  <img src="./images/svg/search_icon.svg" alt="Иконка поиска" />
+                </div>
+
+                <div class="input_date">
+                  <input type="text" placeholder="Когда" />
+                  <input type="text" placeholder="Продолжительность" />
+                </div>
+
+                <select name="type_select" id="">
+                  <option value="">Тип тура</option>
+                </select>
+                <input class="find_btn no_border" type="submit" value="Найти" />
+              </form>
+            </div>
+          </div>
+          <div class="why_us_block">
+            <h2>Почему именно мы</h2>
+            <div class="why_block">
+              <div class="reason_block">
+                <img src="./images/visa.png" alt="Визовая поддержка клиентов" />
+                <p>Визовая поддержка клиентов</p>
+              </div>
+              <div class="reason_block">
+                <img src="./images/world.png" alt="Направления" />
+                <p>Направления по всему миру</p>
+              </div>
+              <div class="reason_block">
+                <img src="./images/hunter.png" alt="Направления" />
+                <p>Сопровождение опытными гидами</p>
+              </div>
+              <div class="reason_block">
+                <img src="./images/bbq.png" alt="Направления" />
+                <p>Полное обеспечение снаряжением</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>

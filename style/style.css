@@ -1,3 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 1128px;
+  margin: auto;
+}
+
+.header {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 3%, rgba(27, 30, 34, 0.4) 49%, rgb(27, 30, 34) 85%), url(../images/forest_road.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-height: 1800px;
+}
+
+.header_wrapper {
+  padding-top: 41px;
+}
+
+.header_nav_block {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_nav_block nav {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.header_nav_block nav a {
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 41px;
+       column-gap: 41px;
+}
+
+.hidden_img {
+  display: none;
+}
+
+.lang_buttons {
+  display: flex;
+  -moz-column-gap: 21px;
+       column-gap: 21px;
+}
+
+.lang_btn {
+  border: none;
+  background-color: transparent;
+  font-family: Montserrat;
+  color: #fff;
+  height: 16px;
+  width: 31px;
+}
+
+.btn_off {
+  color: rgba(196, 196, 196, 0.5);
+}
+
+.header_nav {
+  display: flex;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  align-items: center;
+}
+.header_nav button {
+  height: 48px;
+  width: 146px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #ffb800;
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.header_text_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 85px;
+}
+.header_text_block h1 {
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 58px;
+  max-width: 582px;
+}
+.header_text_block p {
+  margin-top: 26px;
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 38px;
+  max-width: 474px;
+}
+
+.search_form_block {
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(24px);
+          backdrop-filter: blur(24px);
+  background: rgba(51, 51, 51, 0.25);
+  border-radius: 10px;
+}
+.search_form_block form {
+  padding: 50px 70px 55px 70px;
+  max-width: 500px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+}
+.search_form_block form p {
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.search_form_block form input {
+  background-color: transparent;
+  height: 36px;
+  max-width: 360px;
+  padding: 0;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+.search_form_block form input::-moz-placeholder {
+  color: #fff;
+  font-family: Montserrat;
+  padding-left: 13px;
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.search_form_block form input::placeholder {
+  color: #fff;
+  font-family: Montserrat;
+  padding-left: 13px;
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.search_form_block form .input_date {
+  display: flex;
+  justify-content: space-between;
+}
+.search_form_block form select {
+  background-color: transparent;
+  color: #fff;
+  font-family: Montserrat;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  height: 36px;
+  width: 360px;
+  padding-left: 13px;
+}
+.search_form_block .no_border {
+  border: none;
+}
+.search_form_block .find_btn {
+  background-color: #ffb800;
+  font-family: Montserrat;
+  color: #333333;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.search_form_block .search_panel {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  height: 36px;
+  width: 360px;
+}
+
+.why_us_block {
+  margin-top: 205px;
+  text-align: center;
+}
+.why_us_block h2 {
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38px;
+  margin-bottom: 44px;
+}
+
+.why_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.reason_block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+  align-items: center;
+  justify-content: center;
+}
+.reason_block p {
+  max-width: 241px;
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.reason_block img {
+  max-width: 72px;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    background-position: center top;
+  }
+  .container {
+    width: 85%;
+  }
+  .header_text_block {
+    text-align: center;
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .header_text_block h1 {
+    font-size: clamp(32px, 7vw, 65px);
+    max-width: 600px;
+  }
+  .header_text_block p {
+    max-width: 600px;
+  }
+  .search_form_block form input {
+    max-width: 500px;
+  }
+  .header_wrapper {
+    padding-top: 30px;
+  }
+  .header_nav_block {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    max-height: 50px;
+  }
+  .header_nav_block nav {
+    display: flex;
+    -moz-column-gap: clamp(10px, 7vw, 25px);
+         column-gap: clamp(10px, 7vw, 25px);
+  }
+  .header_nav_block nav a {
+    font-size: clamp(12px, 5vw, 14px);
+  }
+  .header_nav button {
+    max-width: clamp(100px, 7vw, 130px);
+    max-height: 35px;
+    font-size: 14px;
+  }
+  .header_logo {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    max-height: 42px;
+    max-width: 150px;
+  }
+  .header_logo img {
+    height: 90%;
+    width: 100%;
+  }
+  .why_us_block {
+    margin-top: 90px;
+  }
+  .why_block {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .hidden_img {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+  .header_nav_block {
+    flex-direction: row-reverse;
+    background-color: transparent;
+  }
+  .header_logo {
+    align-items: flex-end;
+    row-gap: 0px;
+  }
+  .header_nav {
+    display: none;
+  }
+  .search_form_block form {
+    padding: 15px 45px 30px 45px;
+  }
+  .search_form_block form input {
+    max-width: 320px;
+  }
+  .search_form_block form input::-moz-placeholder {
+    padding-left: 8px;
+  }
+  .search_form_block form input::placeholder {
+    padding-left: 8px;
+  }
+  .search_form_block form select {
+    height: 36px;
+    width: 300px;
+    padding-left: 8px;
+  }
+  .input_date {
+    max-width: 300px;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .search_panel {
+    max-width: 300px;
+  }
+}
+@media (max-width: 450px) {
+  .header_text_block h1 {
+    line-height: 38px;
+  }
+  .header_text_block p {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .search_form_block form {
+    padding: 15px 25px 30px 25px;
+  }
+  .search_form_block form input {
+    max-width: 280px;
+  }
+  .search_form_block form input::-moz-placeholder {
+    padding-left: 8px;
+  }
+  .search_form_block form input::placeholder {
+    padding-left: 8px;
+  }
+  .search_form_block form select {
+    width: 280px;
+    padding-left: 8px;
+  }
+  .search_panel {
+    max-width: 280px;
+  }
+  .why_us_block h2 {
+    font-size: 28px;
+  }
+  .reason_block img {
+    max-width: 64px;
+    max-height: 64px;
+  }
+  .reason_block p {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */

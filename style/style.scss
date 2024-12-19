@@ -1,3 +1,395 @@
-.container{
-    max-width: 1128px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$main_text_color: #fff;
+$sub_text_color: #333333;
+$main_font_family: Montserrat;
+
+@mixin main_text_style(
+  $f_size: 20px,
+  $f_weight: 400,
+  $l_height: 20px,
+  $color: $main_text_color
+) {
+  font-family: $main_font_family;
+  color: $color;
+  font-size: $f_size;
+  font-weight: $f_weight;
+  line-height: $l_height;
+}
+
+@mixin btn_style($width, $height, $b_radius: 4px) {
+  height: $height;
+  width: $width;
+  border-radius: $b_radius;
+  background-color: transparent;
+  border: 1px solid #ffb800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1128px;
+  margin: auto;
+}
+
+.header {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.03) 3%,
+      rgba(27, 30, 34, 0.4) 49%,
+      rgba(27, 30, 34, 1) 85%
+    ),
+    url(../images/forest_road.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-height: 1800px;
+}
+
+.header_wrapper {
+  padding-top: 41px;
+}
+.header_nav_block {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  nav {
+    display: flex;
+    column-gap: 40px;
+    a {
+      @include main_text_style(18px, 400, 32px);
+      text-decoration: none;
+    }
+  }
+}
+.header_logo {
+  display: flex;
+  align-items: center;
+  column-gap: 41px;
+}
+
+.hidden_img {
+  display: none;
+}
+
+.lang_buttons {
+  display: flex;
+  column-gap: 21px;
+}
+.lang_btn {
+  border: none;
+  background-color: transparent;
+  font-family: $main_font_family;
+  color: $main_text_color;
+  height: 16px;
+  width: 31px;
+}
+
+.btn_off {
+  color: rgba(196, 196, 196, 0.5);
+}
+.header_nav {
+  display: flex;
+  column-gap: 35px;
+  align-items: center;
+
+  button {
+    @include btn_style(146px, 48px, 10px);
+    @include main_text_style(18px, 400, 32px);
+  }
+}
+
+.header_text_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 85px;
+
+  h1 {
+    @include main_text_style(48px, 500, 58px);
+    max-width: 582px;
+  }
+
+  p {
+    margin-top: 26px;
+    @include main_text_style(20px, 400, 38px);
+    max-width: 474px;
+  }
+}
+.search_form_block {
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(24px);
+  background: rgba(51, 51, 51, 0.25);
+  border-radius: 10px;
+  form {
+    padding: 50px 70px 55px 70px;
+    max-width: 500px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 22px;
+    p {
+      @include main_text_style(20px, 500, 24px);
+    }
+    input {
+      background-color: transparent;
+      height: 36px;
+      max-width: 360px;
+      padding: 0;
+      border: 1px solid #fff;
+      border-radius: 4px;
+    }
+    input::placeholder {
+      color: #fff;
+      font-family: $main_font_family;
+      padding-left: 13px;
+      @include main_text_style(13px, 400, 16px);
+    }
+
+    .input_date {
+      display: flex;
+      justify-content: space-between;
+    }
+    select {
+      background-color: transparent;
+      color: #fff;
+      font-family: $main_font_family;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      height: 36px;
+      width: 360px;
+      padding-left: 13px;
+    }
+  }
+
+  .no_border {
+    border: none;
+  }
+
+  .find_btn {
+    background-color: #ffb800;
+    @include main_text_style(20px, 500, 24px, $sub_text_color);
+  }
+  .search_panel {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    height: 36px;
+    width: 360px;
+  }
+}
+
+.why_us_block {
+  margin-top: 205px;
+  text-align: center;
+
+  h2 {
+    @include main_text_style(34px, 500, 38px);
+    margin-bottom: 44px;
+  }
+}
+
+.why_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.reason_block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    max-width: 241px;
+    @include main_text_style(20px, 400, 24px);
+  }
+
+  img{
+    max-width: 72px;
+    // max-height: 72px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    background-position: center top;
+  }
+  .container {
+    width: 85%;
+  }
+
+  .header_text_block {
+    text-align: center;
+    flex-direction: column;
+    row-gap: 40px;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: clamp(32px, 7vw, 65px);
+      max-width: 600px;
+    }
+
+    p {
+      max-width: 600px;
+    }
+  }
+
+  .search_form_block {
+    form {
+      input {
+        max-width: 500px;
+      }
+    }
+  }
+
+  .header_wrapper {
+    padding-top: 30px;
+  }
+  .header_nav_block {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    max-height: 50px;
+    nav {
+      display: flex;
+      column-gap: clamp(10px, 7vw, 25px);
+      a {
+        font-size: clamp(12px, 5vw, 14px);
+      }
+    }
+  }
+
+  .header_nav {
+    button {
+      max-width: clamp(100px, 7vw, 130px);
+      max-height: 35px;
+      font-size: 14px;
+    }
+  }
+
+  .header_logo {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    max-height: 42px;
+    max-width: 150px;
+    img {
+      height: 90%;
+      width: 100%;
+    }
+  }
+
+  .why_us_block {
+    margin-top: 90px;
+  }
+  .why_block {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+}
+@media (max-width: 800px) {
+  .hidden_img {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+
+  .header_nav_block {
+    flex-direction: row-reverse;
+    background-color: transparent;
+  }
+
+  .header_logo {
+    align-items: flex-end;
+    row-gap: 0px;
+  }
+  .header_nav {
+    display: none;
+  }
+
+  .search_form_block {
+    form {
+      padding: 15px 45px 30px 45px;
+
+      input {
+        max-width: 320px;
+      }
+      input::placeholder {
+        padding-left: 8px;
+      }
+      select {
+        height: 36px;
+        width: 300px;
+        padding-left: 8px;
+      }
+    }
+  }
+
+  .input_date {
+    max-width: 300px;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .search_panel {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .header_text_block{
+    h1{
+      line-height:38px;
+    }
+    p{
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+  .search_form_block {
+    form {
+      padding: 15px 25px 30px 25px;
+      input {
+        max-width: 280px;
+      }
+      input::placeholder {
+        padding-left: 8px;
+      }
+      select {
+        width: 280px;
+        padding-left: 8px;
+      }
+    }
+  }
+
+  .search_panel{
+    max-width: 280px;
+  }
+
+  .why_us_block{
+    h2{
+      font-size: 28px;
+    }
+  }
+
+  .reason_block{
+    img{
+      max-width: 64px;
+      max-height: 64px;
+    }
+
+    p{
+      font-size: 16px;
+    }
+  }
 }
