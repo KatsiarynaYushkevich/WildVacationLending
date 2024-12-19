@@ -319,6 +319,38 @@ $main_font_family: Montserrat;
 .date {
   @include main_text_style(13px, 400, 16px);
 }
+
+.info_wrapper{
+  background-image:linear-gradient( rgba(27, 30, 34, 0.78), rgba(27, 30, 34, 0.78) ), url(../images/mountains_bg.png);
+  background-repeat: no-repeat;
+background-size: cover;
+  width: 100%;
+  max-height: 1000px;
+}
+
+.info{
+  padding: 85px 0 68px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+}
+.info_block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ row-gap: 21px;
+  span{
+    @include main_text_style(78px, 500, 58px, #FFB800);
+  }
+
+  p{
+    @include main_text_style(20px, 500, 24px, );
+  }
+}
+
 @media (max-width: 1200px) {
   .header {
     background-position: center top;
@@ -355,7 +387,7 @@ $main_font_family: Montserrat;
     padding-top: 30px;
   }
   .header_nav_block {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(27, 30, 34, 0.4);
     border-radius: 10px;
     max-height: 50px;
     nav {
@@ -396,11 +428,21 @@ $main_font_family: Montserrat;
     row-gap: 20px;
     column-gap: 20px;
   }
+
+  .info_block{
+    span{
+      font-size: clamp(64px, 7vw, 72px);
+    }
+    p{
+      font-size: clamp(14px, 7vw, 16px);
+    }
+  }
+
 }
 @media (max-width: 800px) {
   .hidden_img {
     display: block;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(27, 30, 34, 0.4);
     border-radius: 5px;
   }
 
@@ -442,6 +484,20 @@ $main_font_family: Montserrat;
   }
   .search_panel {
     max-width: 300px;
+  }
+
+  .info{
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .info_block{
+    width: 100%;
+    border: 3px solid #FFB800;
+    border-radius: 10px;
+    padding: 15px;
+    row-gap: 5px;
+    background-color: rgba(27, 30, 34, 0.4);
   }
 }
 
