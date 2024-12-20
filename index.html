@@ -48,17 +48,24 @@
               <form action="">
                 <p>Быстрый поиск тура</p>
                 <div class="search_panel">
-                  <input class="no_border" type="search" placeholder="Куда" />
+                  <input
+                    class="no_border color_text"
+                    type="search"
+                    placeholder="Куда"
+                  />
                   <img src="./images/svg/search_icon.svg" alt="Иконка поиска" />
                 </div>
-
                 <div class="input_date">
                   <input type="text" placeholder="Когда" />
                   <input type="text" placeholder="Продолжительность" />
                 </div>
-
-                <select name="type_select" id="">
-                  <option value="">Тип тура</option>
+                <select class="custom_select" name="type_select" id="">
+                  <option value="type" disabled selected hidden>
+                    Тип тура
+                  </option>
+                  <option value="excursion">Экскурсионный</option>
+                  <option value="day_off">Тур выходного дня</option>
+                  <option value="no_night">Без ночных переездов</option>
                 </select>
                 <input class="find_btn no_border" type="submit" value="Найти" />
               </form>
@@ -282,7 +289,7 @@
               <div class="blog_info">
                 <div class="blog_block">
                   <div class="direction_img">
-                    <img src="./images/forest_travel.png" alt="" />
+                    <img src="./images/forest_travel.png" alt="Прогулка в лесу"/>
                   </div>
                   <div class="direction_text">
                     <h3>Как стать успешным тревел-блогером</h3>
@@ -295,21 +302,20 @@
                       <span>17 октября 2018</span>
                       <div class="social_info">
                         <div class="blog_icon">
-                          <img src="./images/svg/chat.svg" alt="" />
+                          <img src="./images/svg/chat.svg" alt="Иконка чата"/>
                           <span>208</span>
                         </div>
                         <div class="blog_icon">
-                          <img src="./images/svg/heart.svg" alt="" />
+                          <img class="like" src="./images/svg/heart.svg" alt="Иконка лайк"/>
                           <span>21</span>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
                 <div class="blog_block">
                   <div class="direction_img">
-                    <img src="./images/man_with_backpack.png" alt="" />
+                    <img src="./images/man_with_backpack.png" alt="Путешестие в Норвегию"/>
                   </div>
                   <div class="direction_text">
                     <h3>Лайфхаки успешно- го путешествия по Норвегии</h3>
@@ -321,11 +327,11 @@
                       <span>12 октября 2018</span>
                       <div class="social_info">
                         <div class="blog_icon">
-                          <img src="./images/svg/chat.svg" alt="" />
+                          <img src="./images/svg/chat.svg" alt="Иконка чата"/>
                           <span>112</span>
                         </div>
                         <div class="blog_icon">
-                          <img src="./images/svg/gray_heart.svg" alt="" />
+                          <img class="like" src="./images/svg/heart.svg" alt="Иконка лайк"/>
                           <span>13</span>
                         </div>
                       </div>
@@ -343,9 +349,8 @@
           <div class="actual_directions">
             <h2>Отзывы наших клиентов</h2>
             <div class="reviews">
-              <img src="./images/sofia.png" alt="" />
+              <img class="person" src="./images/sofia.png" alt="София"/>
               <div class="review_text">
-                <!-- <img src="./images/quotes.png" alt=""> -->
                 <p>
                   Спасибо, что даете почувствовать себя сводобными! Ходили
                   дважды, и каждый раз заряжались энергией на год вперед.
@@ -353,7 +358,7 @@
                 </p>
                 <span>София</span>
               </div>
-              <img src="./images/svg/points.svg" alt="" />
+              <img src="./images/svg/points.svg" alt="Точки"/>
             </div>
           </div>
         </div>
@@ -374,23 +379,19 @@
               </div>
             </div>
             <div class="row_link items_top">
-                <span>Телефоны</span>
-             <div class="column_link link phone">
-              <a href=""><p>+375 33 888-44-22</p></a>
-                <a href=""><p>+375 29 963-85-21</p></a> 
+              <span>Телефоны</span>
+              <div class="column_link link phone">
+                <a href="tel:+375338884422"><p>+375 33 888-44-22</p></a>
+                <a href="tel:+375299638521"><p>+375 29 963-85-21</p></a>
               </div>
             </div>
             <div class="column_link link">
               <span>Мы в соцсетях</span>
               <div class="footer_icons">
-                <a href="#"><img src="./images/svg/instagram.svg" alt="" /></a>
-                <a href="#"
-                  ><img src="./images/svg/vk-social-network-logo.svg" alt=""
-                /></a>
-                <a href="#"><img src="./images/svg/twitter.svg" alt="" /></a>
-                <a href="#"
-                  ><img src="./images/svg/facebook-letter-logo.svg" alt=""
-                /></a>
+                <a href="#"><img src="./images/svg/instagram.svg" alt="Логотип instagram"/></a>
+                <a href="#"><img src="./images/svg/vk-social-network-logo.svg" alt="Логотип vk"/></a>
+                <a href="#"><img src="./images/svg/twitter.svg" alt="Логотип twitter"/></a>
+                <a href="#"><img src="./images/svg/facebook-letter-logo.svg" alt="Логотип facebook"/></a>
               </div>
             </div>
           </div>

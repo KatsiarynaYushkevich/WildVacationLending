@@ -144,24 +144,10 @@
   padding: 0;
   border: 1px solid #fff;
   border-radius: 4px;
-}
-.search_form_block form input::-moz-placeholder {
-  color: #fff;
-  font-family: Montserrat;
-  padding-left: 13px;
+  outline: none;
   font-family: Montserrat;
   color: #fff;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-}
-.search_form_block form input::placeholder {
-  color: #fff;
-  font-family: Montserrat;
-  padding-left: 13px;
-  font-family: Montserrat;
-  color: #fff;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 16px;
 }
@@ -178,6 +164,16 @@
   height: 36px;
   width: 360px;
   padding-left: 13px;
+}
+.search_form_block .custom_select {
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.search_form_block option {
+  background-color: #1b1e22;
 }
 .search_form_block .no_border {
   border: none;
@@ -295,7 +291,18 @@
   height: 100%;
 }
 
+.direction_img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.direction_img img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
 .direction_text {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -533,12 +540,13 @@
 }
 .footer_links span {
   font-family: Montserrat;
-  color: #FFB800;
+  color: #ffb800;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
 }
-.footer_links a, .footer_links p {
+.footer_links a,
+.footer_links p {
   text-decoration: none;
   font-family: Montserrat;
   color: #fff;
@@ -572,6 +580,89 @@
 }
 .footer_icons a {
   padding: 0;
+}
+
+button:hover {
+  background-color: #ffb800;
+  color: #333333;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.find_btn:hover {
+  background-color: #ffd05a;
+  color: #fff;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+input::-moz-placeholder {
+  color: #fff;
+  font-family: Montserrat;
+  padding-left: 13px;
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+input::placeholder {
+  color: #fff;
+  font-family: Montserrat;
+  padding-left: 13px;
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+:focus::-moz-placeholder {
+  color: transparent;
+}
+
+:focus::placeholder {
+  color: transparent;
+}
+
+.direction_block:hover *:not(.date,
+.date p,
+.date_text,
+.price,
+.price_text,
+.price_text p,
+.price_block) {
+  background-color: #fff;
+  color: #333333;
+}
+
+.direction_block:hover {
+  transform: scale(1.05);
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.blog_block:hover {
+  transform: scale(1.05);
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.blog_places:hover {
+  transform: scale(1.05);
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.header_nav_block a:hover {
+  color: #ffb800;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.blog_icon:hover .like {
+  content: url("../images/svg/yellow_heart.svg");
 }
 
 @media (max-width: 1200px) {

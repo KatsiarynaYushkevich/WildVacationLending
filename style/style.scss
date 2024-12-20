@@ -143,14 +143,9 @@ $main_font_family: Montserrat;
       padding: 0;
       border: 1px solid #fff;
       border-radius: 4px;
+      outline: none;
+      @include main_text_style(14px, 400, 16px);
     }
-    input::placeholder {
-      color: #fff;
-      font-family: $main_font_family;
-      padding-left: 13px;
-      @include main_text_style(13px, 400, 16px);
-    }
-
     .input_date {
       display: flex;
       justify-content: space-between;
@@ -165,6 +160,14 @@ $main_font_family: Montserrat;
       width: 360px;
       padding-left: 13px;
     }
+  }
+
+  .custom_select {
+    @include main_text_style(14px, 400, 16px);
+  }
+
+  option {
+    background-color: #1b1e22;
   }
 
   .no_border {
@@ -265,7 +268,17 @@ $main_font_family: Montserrat;
   }
 }
 
+.direction_img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+}
 .direction_text {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -444,49 +457,111 @@ $main_font_family: Montserrat;
   }
 }
 
-.footer_wrapper{
+.footer_wrapper {
   background-color: #1b1e22;
   width: 100%;
-
 }
-.footer_links{
+.footer_links {
   padding: 2px 0 15px 0;
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
 
-  span{
-    @include main_text_style(13px, 400, 16px, #FFB800);
+  span {
+    @include main_text_style(13px, 400, 16px, #ffb800);
   }
 
-  a, p{
+  a,
+  p {
     text-decoration: none;
-    @include main_text_style(13px, 400, 16px, );
+    @include main_text_style(13px, 400, 16px);
   }
 }
 
-.row_link{
+.row_link {
   display: flex;
   column-gap: 27px;
   align-items: center;
 }
 
-.column_link{
+.column_link {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
 
-.items_top{
-  align-items:flex-start;
+.items_top {
+  align-items: flex-start;
 }
-.footer_icons{
+.footer_icons {
   display: flex;
   column-gap: 24px;
   align-items: center;
-  a{
+  a {
     padding: 0;
   }
+}
+
+button:hover {
+  background-color: #ffb800;
+  color: $sub_text_color;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.find_btn:hover {
+  background-color: #ffd05a;
+  color: $main_text_color;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+input::placeholder {
+  color: #fff;
+  font-family: $main_font_family;
+  padding-left: 13px;
+  @include main_text_style(13px, 400, 16px);
+}
+:focus::placeholder {
+  color: transparent;
+}
+
+.direction_block:hover
+  *:not(
+    .date,
+    .date p,
+    .date_text,
+    .price,
+    .price_text,
+    .price_text p,
+    .price_block
+  ) {
+  background-color: #fff;
+  color: $sub_text_color;
+}
+.direction_block:hover {
+  transform: scale(1.05);
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.blog_block:hover {
+  transform: scale(1.05);
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.blog_places:hover {
+  transform: scale(1.05);
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+.header_nav_block a:hover {
+  color: #ffb800;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+.blog_icon:hover .like {
+  content: url('../images/svg/yellow_heart.svg');
 }
 
 @media (max-width: 1200px) {
@@ -673,18 +748,18 @@ $main_font_family: Montserrat;
     }
   }
 
-  .footer_wrapper{
+  .footer_wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .footer_links{
+  .footer_links {
     flex-direction: column;
     row-gap: 20px;
     align-items: flex-start;
   }
 
-  .link{
+  .link {
     display: flex;
     flex-direction: row;
     column-gap: 15px;
@@ -745,26 +820,26 @@ $main_font_family: Montserrat;
     }
   }
 
-  .blog_places{
-    h3{
+  .blog_places {
+    h3 {
       font-size: 24px;
     }
   }
 
-  .phone{
+  .phone {
     flex-direction: column;
   }
 
-  .column_link{
+  .column_link {
     width: 100%;
     justify-content: space-between;
     align-items: center;
   }
 
-  .link{
+  .link {
     align-items: flex-end;
   }
-  .row_link{
+  .row_link {
     width: 100%;
     justify-content: space-between;
   }
