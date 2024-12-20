@@ -491,6 +491,89 @@
        column-gap: 7px;
 }
 
+.reviews {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.review_text {
+  max-width: 924px;
+  text-align: center;
+  position: relative;
+}
+.review_text p {
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 6px;
+}
+.review_text span {
+  font-family: Montserrat;
+  color: #ffb800;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.footer_wrapper {
+  background-color: #1b1e22;
+  width: 100%;
+}
+
+.footer_links {
+  padding: 2px 0 15px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer_links span {
+  font-family: Montserrat;
+  color: #FFB800;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.footer_links a, .footer_links p {
+  text-decoration: none;
+  font-family: Montserrat;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.row_link {
+  display: flex;
+  -moz-column-gap: 27px;
+       column-gap: 27px;
+  align-items: center;
+}
+
+.column_link {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.items_top {
+  align-items: flex-start;
+}
+
+.footer_icons {
+  display: flex;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  align-items: center;
+}
+.footer_icons a {
+  padding: 0;
+}
+
 @media (max-width: 1200px) {
   .header {
     background-position: center top;
@@ -642,6 +725,26 @@
   .direction_text span {
     font-size: clamp(8px, 7vw, 10px);
   }
+  .review_text p {
+    font-size: clamp(14px, 7vw, 16px);
+  }
+  .footer_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer_links {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-start;
+  }
+  .link {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    align-items: center;
+  }
 }
 @media (max-width: 550px) {
   .blog_info {
@@ -685,5 +788,23 @@
   }
   .reason_block p {
     font-size: 16px;
+  }
+  .blog_places h3 {
+    font-size: 24px;
+  }
+  .phone {
+    flex-direction: column;
+  }
+  .column_link {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .link {
+    align-items: flex-end;
+  }
+  .row_link {
+    width: 100%;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=style.css.map */
